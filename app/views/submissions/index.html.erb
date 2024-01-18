@@ -1,0 +1,13 @@
+<h1>Submissions</h1>
+
+<% @submissions.each do |submission|%>
+	<div>
+		<%= submission.title%>
+		<%= submission.body%>
+		<%= link_to "Edit", edit_submission_path(submission)%>
+		<%= link_to "Delete", submission, method: :delete, data: { confirm: "Are you sure?"}%>
+	</div>
+<%end%>
+
+<%= link_to "New Submission" , new_submission_path%>
+<%= link_to "Edit" , edit_submission_path%>
