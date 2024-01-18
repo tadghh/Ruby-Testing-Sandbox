@@ -38,4 +38,5 @@ class SubmissionsControllerTest < ActionDispatch::IntegrationTest
       delete submission_url(@submission)
     end
     assert_redirected_to submissions_url
+  end
 end
